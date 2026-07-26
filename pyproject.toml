@@ -1,0 +1,10 @@
+[project]
+name = "mcdr-plugin-template"
+version = "0.1.0"
+description = "Your MCDR Plugin's description"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "mcdreforged>=2.15.0",
+]
+license = { file = "LICENSE" }
