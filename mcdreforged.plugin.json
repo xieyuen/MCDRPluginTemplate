@@ -11,6 +11,6 @@
     "dependencies": {
         "mcdreforged": ">=2.15.0"
     },
-    "entrypoint": "template.entrypoint",
+    "entrypoint": "mcdr_plugin_template.entrypoint",
     "resources": ["lang"]
 }
