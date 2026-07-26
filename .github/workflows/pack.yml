@@ -1,0 +1,39 @@
+name: Pack MCDR Plugin
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: 3.14
+
+      - name: Install Requirements
+        run: |
+          pip install pip -U
+          pip install mcdreforged
+          pip install .
+
+      - name: Verfiy Installations
+        run: |
+          mcdreforged -V
+
+      - name: Pack Plugin
+        run: |
+          mcdreforged pack -o dist/
+
+      - name: Upload Packed Plugin
+        if: success()
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/*.mcdr
+          retention-days: 90
+          archive: false
+          
