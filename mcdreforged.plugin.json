@@ -1,5 +1,5 @@
 {
-    "id": "mcdr_plugin_template",
+    "id": "mcdr_template_plugin",
     "version": "0.1.0",
     "name": "MCDR Plugin Template",
     "description": {
@@ -11,6 +11,6 @@
     "dependencies": {
         "mcdreforged": ">=2.15.0"
     },
-    "entrypoint": "mcdr_plugin_template.entrypoint",
+    "entrypoint": "mcdr_template_plugin.entrypoint",
     "resources": ["lang"]
 }
